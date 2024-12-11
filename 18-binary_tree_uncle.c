@@ -1,21 +1,21 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_uncle - Trouve l’oncle d’un nœud
- * @node: Pointeur vers le nœud dont on cherche l’oncle
+ * binary_tree_uncle - Find the uncle of a knot
+ * @node: Pointer to the node whose uncle we are looking for
  *
- * Return: Pointeur vers l'oncle ou NULL si aucun oncle n'existe
+ * Return: Pointer to uncle or NULL if no uncle exists
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	/* Vérifie si le nœud, son parent ou son grand-parent sont NULL */
+	/* Checks if the node, its parent or its grandparent are NULL */
 	if (node == NULL || node->parent == NULL || node->parent->parent == NULL)
 	return (NULL);
 
-/* if le parent is l'enfant gauche du grand-parent, uncle is l'enfant droit */
+/* if parent is the left child of the grandparent, uncle is the right child */
 	if (node->parent == node->parent->parent->left)
 	return (node->parent->parent->right);
 
-/* Sinon, l’oncle est l’enfant gauche du grand-parent */
+/* Otherwise, the uncle is the left child of the grandparent */
 return (node->parent->parent->left);
 }

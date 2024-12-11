@@ -1,12 +1,12 @@
 #include "binary_trees.h"
 
 /*
- * binary_tree_is_perfect - Vérifie si un arbre binaire est parfait
- * @tree: Pointeur vers le nœud racine de l’arbre
- * binary_tree_height - Calcul de la hauteur de l'arbre
- * binary_tree_size - Calcul du nombre total de nœuds dans l'arbre
+ * binary_tree_is_perfect - Checks if a binary tree is perfect
+ * @tree: Pointer to the root node of the tree
+ * binary_tree_height - Calculates the height of the tree
+ * binary_tree_size - Calculates the total number of nodes in the tree
  *
- * Return: 1 si l’arbre est parfait sinon 0
+ * Return: 1 if the tree is perfect otherwise 0
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
@@ -16,12 +16,12 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	{
 		return (0);
 	}
-	/* Calcul de la hauteur de l'arbre */
+	/* Calculating tree height */
 	height = binary_tree_height(tree);
-	/* Calcul du nombre total de nœuds dans l'arbre*/
+	/* Calculating the total number of nodes in the tree*/
 	size = binary_tree_size(tree);
-	/* Calcul de la taille attendue pour un arbre parfait de hauteur 'height' */
+	/* Calculating the expected size for a perfect tree of height 'height' */
 	expected_size = (1 << (height + 1)) - 1;/* 2^(h+1) - 1 */
-	/* Si la taille réelle est égale à la taille voulu, l'arbre est parfait */
+	/* If the actual size is equal to the desired size, the tree is perfect. */
 	return (size == expected_size);
 }

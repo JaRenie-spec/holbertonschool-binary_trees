@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_leaves - Compte les feuilles dans un arbre binaire
- * @tree: Pointeur vers la racine de l’arbre à parcourir
+ * binary_tree_leaves - Counts the leaves in a binary tree
+ * @tree: Pointer to the root of the tree to traverse
  *
- * Return: Nombre de feuilles, ou 0 si tree est NULL
+ * Return: Number of leaves, or 0 if tree is NULL
  */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
