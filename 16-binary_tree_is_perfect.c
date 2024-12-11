@@ -8,7 +8,7 @@
  * binary_tree_height - Calculate the height of the tree
  * binary_tree_size - Calculate the total number of nodes in the tree
  *
- * Return: 1 if tree is perfect otherwise 0
+ * Return: 1 if tree is perfect otherwise 0.
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
